@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/openbanking
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  sql:
+    init:
+      mode: always   # runs schema.sql on startup - seeds demo data
+
+server:
+  port: 8080
+
+ollama:
+  base-url: http://localhost:11434
+  # change this to whatever model you pulled, e.g. llama3.1, qwen2.5, mistral
+  model: llama3.1
